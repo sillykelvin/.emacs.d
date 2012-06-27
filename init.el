@@ -2,7 +2,7 @@
 ; ******* Emacs main config file *******
 ;        Author:  Kelvin Hu
 ;       Created:  04/26/2012
-; Last Modified:  06/16/2012
+; Last Modified:  06/27/2012
 ;---------------------------------------------------------------------------------
 
 ;;; this is no longer needed, because we have set the environment variable HOME pointing to this directory
@@ -21,6 +21,7 @@
 (add-to-list 'load-path "~/.emacs.d/conf")
 (add-to-list 'load-path "~/.emacs.d/util")
 
+
 (require 'conf-theme)
 
 (require 'conf-misc)
@@ -36,3 +37,9 @@
 ;(require 'conf-cedet)
 
 ;(require 'conf-jdee)
+
+;;; ===================== experimental config =============================
+(add-to-list 'load-path "~/.emacs.d/experimental/")
+
+
+(require 'conf-markdown)
