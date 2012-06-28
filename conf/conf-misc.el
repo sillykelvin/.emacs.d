@@ -2,7 +2,7 @@
 ; ******* misc config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/05/2012
-; Last Modified:  06/16/2012
+; Last Modified:  06/28/2012
 ;---------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -15,6 +15,9 @@
 ;;; the startup message shows in *scratch* buffer
 (setq initial-scratch-message "")
 ;(setq initial-scratch-message ";Author: Kelvin Hu\n;Email: ini.kelvin@gmail.com")
+
+;;; reformat the title, show some useful info
+(setq frame-title-format '("%f" (dired-directory dired-directory "%b")))
 
 ;;; personal info
 (setq user-mail-address "ini.kelvin@gmail.com")
@@ -76,6 +79,9 @@
 (setq scroll-conservatively 1000)
 ;;; the next line will avoid the screen jumpy while quick scrolling
 (setq auto-window-vscroll nil)
+
+;;; shutdown mouse accelerating
+(setq mouse-wheel-progressive-speed nil)
 
 ;;; do not backup and auto save
 (setq make-backup-files nil)

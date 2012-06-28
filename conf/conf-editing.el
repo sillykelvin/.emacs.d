@@ -2,7 +2,7 @@
 ; ******* config for more comfortable editing *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/12/2012
-; Last Modified:  06/14/2012
+; Last Modified:  06/28/2012
 ;---------------------------------------------------------------------------------
 
 ;;; move mouse away when cursor moves close to mouse
@@ -38,6 +38,7 @@
         (space-mark 3872 [3876] [95])
         (newline-mark 10 [182 10] [36 10])  ; modified, show another character instead $
         (tab-mark 9 [187 9] [92 9])))
+
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -47,19 +48,6 @@
   '(whitespace-tab ((t (:background "#073642" :foreground "#a07f41"))))
   '(whitespace-trailing ((t (:background "#073642" :foreground "#a07f41")))))
 
-
-;;; convert tab to spaces
-(defun convert-tab-to-spaces ()
-  "this function will convert all tabs into spaces in current buffer, how many spaces a tab will be converted into depends on variable `tab-width'"
-  (interactive)
-  (untabify (point-min) (point-max))
-  (message "all tabs converted into spaces successfully"))
-
-(defun format-buffer ()
-  "this function is used to format current buffer"
-  (interactive)
-  (indent-region (point-min) (point-max))
-  (message "current buffer formatted successfully"))
-;(global-set-key (kbd "<f7>") 'convert-tab-to-spaces)
+(require 'util-editing)
 
 (provide 'conf-editing)
