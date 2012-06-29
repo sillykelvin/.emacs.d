@@ -2,7 +2,7 @@
 ; ******* Emacs main config file *******
 ;        Author:  Kelvin Hu
 ;       Created:  04/26/2012
-; Last Modified:  06/27/2012
+; Last Modified:  06/29/2012
 ;---------------------------------------------------------------------------------
 
 ;;; this is no longer needed, because we have set the environment variable HOME pointing to this directory
@@ -43,3 +43,4 @@
 
 
 (require 'conf-markdown)
+(require 'conf-ace-jump)
