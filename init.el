@@ -44,3 +44,4 @@
 
 (require 'conf-markdown)
 (require 'conf-ace-jump)
+(require 'conf-autopair)
