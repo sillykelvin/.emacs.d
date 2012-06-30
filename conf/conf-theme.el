@@ -9,9 +9,10 @@
 ; color theme config
 ;---------------------------------------------------------------------------------
 (add-to-list 'load-path "~/.emacs.d/lib/color-theme")
-(add-to-list 'load-path "~/.emacs.d/lib/color-theme/solarized")
 (add-to-list 'load-path "~/.emacs.d/lib/color-theme/molokai")
+(add-to-list 'load-path "~/.emacs.d/lib/color-theme/solarized")
 (add-to-list 'load-path "~/.emacs.d/lib/color-theme/sanityinc-solarized")
+(add-to-list 'load-path "~/.emacs.d/lib/color-theme/tomorrow")
 (add-to-list 'load-path "~/.emacs.d/lib/color-theme/sanityinc-tomorrow")
 
 ;(require 'color-theme)
@@ -27,7 +28,11 @@
 ;(require 'color-theme-sanityinc-solarized)
 ;(color-theme-sanityinc-solarized 'dark)
 
+;(require 'color-theme-tomorrow)
+;(color-theme-tomorrow-real 'night)
+
 (require 'color-theme-sanityinc-tomorrow)
 (color-theme-sanityinc-tomorrow 'night)
+
 
 (provide 'conf-theme)
