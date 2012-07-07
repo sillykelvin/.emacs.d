@@ -2,7 +2,7 @@
 ; ******* config for more comfortable editing *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/12/2012
-; Last Modified:  06/28/2012
+; Last Modified:  07/07/2012
 ;---------------------------------------------------------------------------------
 
 ;;; move mouse away when cursor moves close to mouse
@@ -47,6 +47,10 @@
   ;;'(whitespace-indentation ((t (:foreground "#073642"))))
   '(whitespace-tab ((t (:background "#073642" :foreground "#a07f41"))))
   '(whitespace-trailing ((t (:background "#073642" :foreground "#a07f41")))))
+
+;;; auto indent after a new line
+(global-set-key (kbd "RET") 'newline-and-indent)
+
 
 (require 'util-editing)
 
