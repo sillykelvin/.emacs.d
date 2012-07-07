@@ -2,7 +2,7 @@
 ; ******* theme config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/07/2012
-; Last Modified:  07/01/2012
+; Last Modified:  07/07/2012
 ;---------------------------------------------------------------------------------
 
 ;---------------------------------------------------------------------------------
@@ -33,6 +33,12 @@
 
 (require 'color-theme-sanityinc-tomorrow)
 (color-theme-sanityinc-tomorrow 'night)
+
+;;; set special font for Chinese
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+                    charset
+                    (font-spec :family "Microsoft Yahei" :size 12)))
 
 
 (provide 'conf-theme)
