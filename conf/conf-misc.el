@@ -2,7 +2,7 @@
 ; ******* misc config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/05/2012
-; Last Modified:  06/28/2012
+; Last Modified:  07/07/2012
 ;---------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -17,7 +17,9 @@
 ;(setq initial-scratch-message ";Author: Kelvin Hu\n;Email: ini.kelvin@gmail.com")
 
 ;;; reformat the title, show some useful info
-(setq frame-title-format '("%f" (dired-directory dired-directory "%b")))
+;(setq frame-title-format '("%f" (dired-directory dired-directory "%b")))
+;;; the above line has a bug showing file name, use the following instead
+(setq frame-title-format '(buffer-file-name "%f" (dired-directory dired-directory "%b")))
 
 ;;; personal info
 (setq user-mail-address "ini.kelvin@gmail.com")
