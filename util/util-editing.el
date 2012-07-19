@@ -2,7 +2,7 @@
 ; ******* some utility definitions for editing *******
 ;        Author:  Kelvin Hu
 ;       Created:  06/28/2012
-; Last Modified:  06/28/2012
+; Last Modified:  07/20/2012
 ;---------------------------------------------------------------------------------
 
 ;;; convert tab to spaces
@@ -18,6 +18,20 @@
   (indent-region (point-min) (point-max))
   (message "current buffer formatted successfully"))
 ;(global-set-key (kbd "<f7>") 'convert-tab-to-spaces)
+
+(defun smart-beginning-of-line()
+  "the smart version of function `beginning-of-line'"
+  (interactive)
+  (if (eq (line-beginning-position) (point))
+      (skip-chars-forward " \t")
+    (beginning-of-line)))
+
+(defun smart-end-of-line()
+  "the smart version of function `end-of-line'"
+  (interactive)
+  (if (eq (line-end-position) (point))
+        (skip-chars-backward " \t")
+    (end-of-line)))
 
 
 (provide 'util-editing)
