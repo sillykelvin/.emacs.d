@@ -2,8 +2,10 @@
 ; ******* config for more comfortable editing *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/12/2012
-; Last Modified:  07/07/2012
+; Last Modified:  07/20/2012
 ;---------------------------------------------------------------------------------
+
+(require 'util-editing)
 
 ;;; move mouse away when cursor moves close to mouse
 (mouse-avoidance-mode 'animate)
@@ -51,7 +53,9 @@
 ;;; auto indent after a new line
 (global-set-key (kbd "RET") 'newline-and-indent)
 
+;;; redefined the key bindings "C-a" and "C-e"
+(global-set-key (kbd "C-a") 'smart-beginning-of-line)
+(global-set-key (kbd "C-e") 'smart-end-of-line)
 
-(require 'util-editing)
 
 (provide 'conf-editing)

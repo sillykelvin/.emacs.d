@@ -40,7 +40,10 @@
 
 
 ;;; solve the mark setting conflict with system input method
+;;; solved conflict on windows, but it still conflict on mac with spotlight, what the fuck...
 ;(global-set-key (kbd "M-SPC") 'set-mark-command)
+(if is-os-mac
+    (global-set-key (kbd "M-SPC") 'set-mark-command))
 ;;; rebind it to Shift-Space, make it the same as Intellij IDEA
 ;;; this binding is not used any more
 ;;; since I have bound the system input method hot key to other keys
