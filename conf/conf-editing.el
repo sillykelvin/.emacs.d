@@ -2,8 +2,10 @@
 ; ******* config for more comfortable editing *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/12/2012
-; Last Modified:  06/28/2012
+; Last Modified:  07/20/2012
 ;---------------------------------------------------------------------------------
+
+(require 'util-editing)
 
 ;;; move mouse away when cursor moves close to mouse
 (mouse-avoidance-mode 'animate)
@@ -48,6 +50,9 @@
   '(whitespace-tab ((t (:background "#073642" :foreground "#a07f41"))))
   '(whitespace-trailing ((t (:background "#073642" :foreground "#a07f41")))))
 
-(require 'util-editing)
+;;; redefined the key bindings "C-a" and "C-e"
+(global-set-key (kbd "C-a") 'smart-beginning-of-line)
+(global-set-key (kbd "C-e") 'smart-end-of-line)
+
 
 (provide 'conf-editing)
