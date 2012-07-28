@@ -2,14 +2,15 @@
 ; ******* Emacs main config file *******
 ;        Author:  Kelvin Hu
 ;       Created:  04/26/2012
-; Last Modified:  06/29/2012
+; Last Modified:  07/28/2012
 ;---------------------------------------------------------------------------------
 
 ;;; this is no longer needed, because we have set the environment variable HOME pointing to this directory
 ;(if (string-equal system-type "windows-nt") (setenv "HOME" "D:/Dev-Support/Emacs-Config/"))
 
-(server-start)
-
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 
 ;---------------------------------------------------------------------------------
 ; load the initial config
@@ -26,6 +27,8 @@
 
 (require 'conf-misc)
 
+(require 'conf-ido)
+
 (require 'conf-tabbar)
 
 (require 'conf-editing)
@@ -34,14 +37,16 @@
 
 (require 'conf-auto-complete)
 
+(require 'conf-markdown)
+
+(require 'conf-ace-jump)
+
+(require 'conf-autopair)
+
 ;(require 'conf-cedet)
 
 ;(require 'conf-jdee)
 
-;;; ===================== experimental config =============================
-(add-to-list 'load-path "~/.emacs.d/experimental/")
 
-
-(require 'conf-markdown)
-(require 'conf-ace-jump)
-(require 'conf-autopair)
+;;; ===================== read desktop at the last step =====================
+(require 'conf-desktop)
