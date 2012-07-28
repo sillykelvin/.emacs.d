@@ -2,7 +2,7 @@
 ; ******* Emacs main config file *******
 ;        Author:  Kelvin Hu
 ;       Created:  04/26/2012
-; Last Modified:  07/28/2012
+; Last Modified:  07/29/2012
 ;---------------------------------------------------------------------------------
 
 ;;; this is no longer needed, because we have set the environment variable HOME pointing to this directory
@@ -42,6 +42,10 @@
 (require 'conf-ace-jump)
 
 (require 'conf-autopair)
+
+(require 'conf-org)
+
+(require 'conf-ibuffer)
 
 ;(require 'conf-cedet)
 
