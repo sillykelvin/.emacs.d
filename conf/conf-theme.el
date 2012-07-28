@@ -2,7 +2,7 @@
 ; ******* theme config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/07/2012
-; Last Modified:  07/26/2012
+; Last Modified:  07/28/2012
 ;---------------------------------------------------------------------------------
 
 ;---------------------------------------------------------------------------------
@@ -35,10 +35,11 @@
 ;(color-theme-sanityinc-tomorrow 'night)
 
 ;;; set special font for Chinese
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font)
-                    charset
-                    (font-spec :family "Microsoft Yahei" :size 12)))
+(if (display-graphic-p)
+    (dolist (charset '(kana han symbol cjk-misc bopomofo))
+      (set-fontset-font (frame-parameter nil 'font)
+                        charset
+                        (font-spec :family "Microsoft Yahei" :size 12))))
 
 
 (provide 'conf-theme)
