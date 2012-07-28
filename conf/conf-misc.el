@@ -2,7 +2,7 @@
 ; ******* misc config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/05/2012
-; Last Modified:  07/07/2012
+; Last Modified:  07/28/2012
 ;---------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -27,7 +27,10 @@
 
 ;;; disable toolbar, menu bar and scroll bar
 (menu-bar-mode -1)
-(tool-bar-mode -1)
+;;; use if to avoid emacs init error under terminal
+(if (fboundp 'tool-bar-mode)
+    (tool-bar-mode -1))
+
 (set-scroll-bar-mode nil)
 ;;; show column number
 (global-linum-mode t)
@@ -106,12 +109,8 @@
 ;(require 'col-highlight)
 ;(column-highlight-mode)
 
-;;; enable ido mode
-(ido-mode t)
-
 ;;; auto refresh buffers when files changed on disk
 (global-auto-revert-mode t)
-
 
 
 (provide 'conf-misc)
