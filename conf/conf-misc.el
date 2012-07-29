@@ -2,7 +2,7 @@
 ; ******* misc config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/05/2012
-; Last Modified:  07/28/2012
+; Last Modified:  07/29/2012
 ;---------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -26,7 +26,9 @@
 (setq user-full-name "Kelvin Hu")
 
 ;;; disable toolbar, menu bar and scroll bar
-(menu-bar-mode -1)
+;;; show menu bar in mac, since it does not affect a lot
+(unless is-os-mac
+  (menu-bar-mode -1))
 ;;; use if to avoid emacs init error under terminal
 (if (fboundp 'tool-bar-mode)
     (tool-bar-mode -1))
