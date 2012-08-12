@@ -47,6 +47,8 @@
 
 (require 'conf-ibuffer)
 
+(require 'conf-yasnippet)
+
 ;(require 'conf-cedet)
 
 ;(require 'conf-jdee)
