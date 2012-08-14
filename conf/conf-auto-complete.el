@@ -2,7 +2,7 @@
 ; ******* auto complete config *******
 ;        Author:  Kelvin Hu
 ;       Created:  06/16/2012
-; Last Modified:  06/16/2012
+; Last Modified:  08/14/2012
 ;---------------------------------------------------------------------------------
 
 (add-to-list 'load-path "~/.emacs.d/lib/auto-complete")
@@ -15,7 +15,10 @@
 (add-to-list 'ac-modes 'dos-mode)
 
 (setq ac-auto-show-menu t
-      ac-auto-start t
+      ;; fix issue https://github.com/m2ym/auto-complete/issues/127
+      ;; if set ac-auto-start to t, it will take long time to response while inserting ' / ; / <space> before a string under lisp interaction mode
+      ;; so set it to 2 instead (according to the author's comment)
+      ac-auto-start 2 ;t
       ac-dwim t
       ;ac-candidate-limit ac-menu-height
       ac-quick-help-delay 0.5
@@ -24,7 +27,7 @@
 (setq ac-ignore-case 'smart)
 
 (setq-default ac-sources
-              '(;ac-source-yasnippet
+              '(ac-source-yasnippet
                 ac-source-dictionary
                 ac-source-abbrev
                 ac-source-features
