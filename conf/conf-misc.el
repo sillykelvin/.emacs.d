@@ -2,7 +2,7 @@
 ; ******* misc config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/05/2012
-; Last Modified:  07/29/2012
+; Last Modified:  08/15/2012
 ;---------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -24,6 +24,12 @@
 ;;; personal info
 (setq user-mail-address "ini.kelvin@gmail.com")
 (setq user-full-name "Kelvin Hu")
+
+;;; set default major mode to text-mode
+;;; `default-major-mode' is obsolete since 23.2, use `major-mode' instead
+(if is-version-after-24
+    (setq-default major-mode 'text-mode)
+  (setq default-major-mode 'text-mode))
 
 ;;; disable toolbar, menu bar and scroll bar
 ;;; show menu bar in mac, since it does not affect a lot
