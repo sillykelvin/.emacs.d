@@ -2,7 +2,7 @@
 ; ******* flyspell config *******
 ;        Author:  Kelvin Hu
 ;       Created:  08/15/2012
-; Last Modified:  08/15/2012
+; Last Modified:  08/16/2012
 ;---------------------------------------------------------------------------------
 
 
@@ -25,9 +25,13 @@
 (global-set-key (kbd "C-<f8>") 'flyspell-buffer)
 ;(global-set-key (kbd "M-<f8>") 'flyspell-check-previous-highlighted-word)
 
-;; configuration below is copied from Purcell's configuration, no idea what it is used for...
+;;; configuration below is copied from Purcell's configuration, no idea what it is used for...
 ;(add-hook 'nxml-mode-hook (lambda ()
 ;                            (add-to-list 'flyspell-prog-text-faces 'nxml-text-face)))
+
+;;; the line below is to make flyspell stays in harmony with auto-complete,
+;;; according to http://cx4a.org/software/auto-complete/manual.html#Known_Bugs
+(ac-flyspell-workaround)
 
 
 (provide 'conf-flyspell)
