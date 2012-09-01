@@ -2,7 +2,7 @@
 ; ******* Emacs main config file *******
 ;        Author:  Kelvin Hu
 ;       Created:  04/26/2012
-; Last Modified:  08/15/2012
+; Last Modified:  09/01/2012
 ;---------------------------------------------------------------------------------
 
 ;;; this is no longer needed, because we have set the environment variable HOME pointing to this directory
@@ -50,6 +50,8 @@
 (require 'conf-yasnippet)
 
 (require 'conf-flyspell)
+
+(require 'conf-encoding)
 
 ;(require 'conf-cedet)
 
