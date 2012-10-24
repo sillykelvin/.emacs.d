@@ -2,7 +2,7 @@
 ; ******* flyspell config *******
 ;        Author:  Kelvin Hu
 ;       Created:  08/15/2012
-; Last Modified:  08/16/2012
+; Last Modified:  10/24/2012
 ;---------------------------------------------------------------------------------
 
 
@@ -11,15 +11,17 @@
       (setq-default ispell-program-name "aspell")
       (ispell-change-dictionary "american" t)))
 
-(add-hook 'text-mode-hook (lambda () (flyspell-mode t)))
+;; do NOT turn on flyspell, since it will obviously slow down emacs
 
-(dolist (hook '(;lisp-mode-hook
-                emacs-lisp-mode-hook
-                java-mode-hook
-                javascript-mode-hook
-                python-mode-hook
-                nxml-mode-hook))
-  (add-hook hook 'flyspell-prog-mode))
+;; (add-hook 'text-mode-hook (lambda () (flyspell-mode t)))
+
+;; (dolist (hook '(;lisp-mode-hook
+;;                 emacs-lisp-mode-hook
+;;                 java-mode-hook
+;;                 javascript-mode-hook
+;;                 python-mode-hook
+;;                 nxml-mode-hook))
+;;   (add-hook hook 'flyspell-prog-mode))
 
 (global-set-key (kbd "<f8>") 'ispell-word)
 (global-set-key (kbd "C-<f8>") 'flyspell-buffer)
