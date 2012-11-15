@@ -2,7 +2,7 @@
 ; ******* config for more comfortable editing *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/12/2012
-; Last Modified:  07/20/2012
+; Last Modified:  11/15/2012
 ;---------------------------------------------------------------------------------
 
 (require 'util-editing)
@@ -56,6 +56,9 @@
 ;;; redefined the key bindings "C-a" and "C-e"
 (global-set-key (kbd "C-a") 'smart-beginning-of-line)
 (global-set-key (kbd "C-e") 'smart-end-of-line)
+
+;;; define the smart comment/uncomment key binding
+(define-key (current-global-map) (kbd "C-x C-/") 'smart-toggle-comment)
 
 
 (provide 'conf-editing)

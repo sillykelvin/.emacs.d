@@ -2,7 +2,7 @@
 ; ******* some utility definitions for editing *******
 ;        Author:  Kelvin Hu
 ;       Created:  06/28/2012
-; Last Modified:  07/20/2012
+; Last Modified:  11/15/2012
 ;---------------------------------------------------------------------------------
 
 ;;; convert tab to spaces
@@ -32,6 +32,13 @@
   (if (eq (line-end-position) (point))
         (skip-chars-backward " \t")
     (end-of-line)))
+
+(defun smart-toggle-comment (beg end &optional arg)
+  (interactive "*r\nP")
+  (unless (region-active-p)
+    (setq beg (line-beginning-position)
+          end (line-end-position)))
+  (comment-or-uncomment-region beg end arg))
 
 
 (provide 'util-editing)
