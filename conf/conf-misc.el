@@ -2,7 +2,7 @@
 ; ******* misc config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/05/2012
-; Last Modified:  08/15/2012
+; Last Modified:  11/15/2012
 ;---------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -84,11 +84,11 @@
 ;;; use y/n to instead yes/no
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;;; cursor blink
-;(blink-cursor-mode nil)
+;;; do not blink cursor
+(blink-cursor-mode -1)
 
 ;;; cursor type
-(setq-default cursor-type 'bar)
+(setq-default cursor-type 'box)
 
 ;;; continuous scroll
 (setq scroll-margin 7)
