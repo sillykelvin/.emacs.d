@@ -57,6 +57,8 @@
 (global-set-key (kbd "C-a") 'smart-beginning-of-line)
 (global-set-key (kbd "C-e") 'smart-end-of-line)
 
+;;; set the comment style to multi-line
+(setq comment-style 'multi-line)
 ;;; define the smart comment/uncomment key binding
 (define-key (current-global-map) (kbd "C-x C-/") 'smart-toggle-comment)
 
