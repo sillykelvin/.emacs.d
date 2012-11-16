@@ -2,8 +2,10 @@
 ; ******* theme config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/07/2012
-; Last Modified:  07/28/2012
+; Last Modified:  11/16/2012
 ;---------------------------------------------------------------------------------
+
+(require 'util-common)
 
 ;---------------------------------------------------------------------------------
 ; color theme config
@@ -34,12 +36,20 @@
 ;(require 'color-theme-sanityinc-tomorrow)
 ;(color-theme-sanityinc-tomorrow 'night)
 
+;;; set default display font
+(set-face-font 'default
+               (font-candidate "Droid Sans Mono-10.5"
+                               "Consolas-10.5"
+;;; Source Code Pro performs not very good in Emacs, put it at the last position
+                               "Source Code Pro-10.5"))
+
 ;;; set special font for Chinese
 (if (display-graphic-p)
     (dolist (charset '(kana han symbol cjk-misc bopomofo))
       (set-fontset-font (frame-parameter nil 'font)
                         charset
-                        (font-spec :family "Microsoft Yahei" :size 12))))
+                        ;;; TODO add font for ArchLinux here on MBA
+                        (font-candidate "Microsoft Yahei-10.5"))))
 
 
 (provide 'conf-theme)
