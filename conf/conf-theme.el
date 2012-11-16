@@ -2,7 +2,7 @@
 ; ******* theme config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/07/2012
-; Last Modified:  11/16/2012
+; Last Modified:  11/17/2012
 ;---------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -39,8 +39,8 @@
 ;;; set default display font
 (set-face-font 'default
                (font-candidate "Droid Sans Mono-10.5"
+                               "WenQuanYi Micro Hei Mono-10.5"
                                "Consolas-10.5"
-;;; Source Code Pro performs not very good in Emacs, put it at the last position
                                "Source Code Pro-10.5"))
 
 ;;; set special font for Chinese
@@ -48,8 +48,8 @@
     (dolist (charset '(kana han symbol cjk-misc bopomofo))
       (set-fontset-font (frame-parameter nil 'font)
                         charset
-                        ;;; TODO add font for ArchLinux here on MBA
-                        (font-candidate "Microsoft Yahei-10.5"))))
+                        (font-candidate "Microsoft Yahei-10.5"
+                                        "WenQuanYi Micro Hei-10.5"))))
 
 
 (provide 'conf-theme)
