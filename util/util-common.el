@@ -2,7 +2,7 @@
 ; ******* some common utility definitions *******
 ;        Author:  Kelvin Hu
 ;       Created:  06/16/2012
-; Last Modified:  06/30/2012
+; Last Modified:  11/16/2012
 ;---------------------------------------------------------------------------------
 
 
@@ -14,6 +14,15 @@
 
 (defconst is-os-mac (string-equal system-type "darwin")
   "non-nil means it is mac operating system")
+
+
+(defun font-exists-p (font-name)
+  "To check if a font exists on current system"
+  (if (find-font (font-spec :name font-name)) t nil))
+
+(defun font-candidate (&rest fonts)
+  "Return the font exists on current system and first match in the list."
+  (find-if 'font-exists-p fonts))
 
 
 (provide 'util-common)
