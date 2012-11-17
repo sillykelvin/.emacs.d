@@ -47,7 +47,7 @@
 ;;; set the default directory
 ;(if (string-equal system-type "windows-nt") (setq-default default-directory "D:/Dev-Support/Emacs-Config/"))
 (if is-os-windows
-    (setq-default default-directory "D:/Dev-Support/Emacs-Config/"))
+    (setq-default default-directory "D:/DevelSupport/EmacsConfig/"))
 
 
 ;;; solve the mark setting conflict with system input method
