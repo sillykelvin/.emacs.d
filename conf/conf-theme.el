@@ -2,7 +2,7 @@
 ; ******* theme config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/07/2012
-; Last Modified:  11/17/2012
+; Last Modified:  11/25/2012
 ;---------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -37,11 +37,12 @@
 ;(color-theme-sanityinc-tomorrow 'night)
 
 ;;; set default display font
+(if (display-graphic-p)
 (set-face-font 'default
                (font-candidate "Droid Sans Mono-10.5"
                                "WenQuanYi Micro Hei Mono-10.5"
                                "Consolas-10.5"
-                               "Source Code Pro-10.5"))
+                               "Source Code Pro-10.5")))
 
 ;;; set special font for Chinese
 (if (display-graphic-p)
