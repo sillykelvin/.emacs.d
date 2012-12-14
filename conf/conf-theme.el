@@ -2,7 +2,7 @@
 ; ******* theme config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/07/2012
-; Last Modified:  11/25/2012
+; Last Modified:  12/12/2012
 ;---------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -49,7 +49,7 @@
     (dolist (charset '(kana han symbol cjk-misc bopomofo))
       (set-fontset-font (frame-parameter nil 'font)
                         charset
-                        (font-candidate "Microsoft Yahei-10.5"
+                        (font-candidate "Microsoft Yahei-12"
                                         "WenQuanYi Micro Hei-10.5"))))
 
 
