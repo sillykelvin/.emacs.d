@@ -30,7 +30,7 @@
 (global-whitespace-mode t)
 ;(setq whitespace-style '(face space tabs trailing lines-tail newline empty tab-mark newline-mark space-mark)
 ;(setq whitespace-style '(face space tabs trailing lines-tail empty tab-mark space-mark))
-(setq whitespace-style '(face tabs trailing lines-tail tab-mark))
+(setq whitespace-style '(face tabs trailing tab-mark))
 (setq whitespace-display-mappings
       '((space-mark 32 [32] [183] [46])     ; modified, do not show dot
         (space-mark 160 [164] [95])
