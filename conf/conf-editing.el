@@ -2,7 +2,7 @@
 ; ******* config for more comfortable editing *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/12/2012
-; Last Modified:  11/15/2012
+; Last Modified:  02/22/2013
 ;---------------------------------------------------------------------------------
 
 (require 'util-editing)
