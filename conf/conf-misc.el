@@ -2,7 +2,7 @@
 ; ******* misc config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/05/2012
-; Last Modified:  11/15/2012
+; Last Modified:  03/07/2013
 ;---------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -91,7 +91,7 @@
 (setq-default cursor-type 'box)
 
 ;;; continuous scroll
-(setq scroll-margin 7)
+(setq scroll-margin 3)
 (setq scroll-conservatively 1000)
 ;;; the next line will avoid the screen jumpy while quick scrolling
 (setq auto-window-vscroll nil)
