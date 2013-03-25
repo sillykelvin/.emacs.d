@@ -2,11 +2,14 @@
 ; ******* Emacs main config file *******
 ;        Author:  Kelvin Hu
 ;       Created:  04/26/2012
-; Last Modified:  12/19/2012
+; Last Modified:  03/25/2013
 ;---------------------------------------------------------------------------------
 
 ;;; this is no longer needed, because we have set the environment variable HOME pointing to this directory
 ;(if (string-equal system-type "windows-nt") (setenv "HOME" "D:/Dev-Support/Emacs-Config/"))
+
+;; disable loading vc plugins, it will obviously slow down emacs booting
+(setq vc-handled-backends ())
 
 (require 'server)
 (unless (server-running-p)
