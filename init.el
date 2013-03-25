@@ -11,6 +11,12 @@
 ;; disable loading vc plugins, it will obviously slow down emacs booting
 (setq vc-handled-backends ())
 
+;; use package.el to manage packages rather than manual efforts
+(require 'package)
+(package-initialize)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 (require 'server)
 (unless (server-running-p)
   (server-start))
