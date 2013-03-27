@@ -1,7 +1,9 @@
-/auto-save-list
-/lib
-/server
-/eshell
+auto-save-list/
+backup/
+elpa/
+lib/
+server/
+eshell/
 ac-comphist.dat
 bookmarks
 .org-id-locations
