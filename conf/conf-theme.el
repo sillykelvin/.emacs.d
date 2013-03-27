@@ -1,56 +1,45 @@
-;---------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
 ; ******* theme config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/07/2012
-; Last Modified:  12/12/2012
-;---------------------------------------------------------------------------------
+; Last Modified:  03/27/2013
+;-------------------------------------------------------------------------------
 
 (require 'util-common)
 
-;---------------------------------------------------------------------------------
-; color theme config
-;---------------------------------------------------------------------------------
-(add-to-list 'load-path "~/.emacs.d/lib/color-theme")
-(add-to-list 'load-path "~/.emacs.d/lib/color-theme/molokai")
-(add-to-list 'load-path "~/.emacs.d/lib/color-theme/solarized")
-(add-to-list 'load-path "~/.emacs.d/lib/color-theme/sanityinc-solarized")
-(add-to-list 'load-path "~/.emacs.d/lib/color-theme/tomorrow")
-(add-to-list 'load-path "~/.emacs.d/lib/color-theme/sanityinc-tomorrow")
+;; molokai theme ported from vim
+;; (load-theme 'molokai t)
 
-;(require 'color-theme)
-;(color-theme-initialize)
-;(color-theme-arjen)
+;; popular solarized theme
+;; (load-theme 'solarized-dark t)
+;; (load-theme 'solarized-light t)
 
-;(require 'color-theme-molokai)
-;(color-theme-molokai)
+;; sanityinc solarized theme
+(load-theme 'sanityinc-solarized-dark t)
+;; (load-theme 'sanityinc-solarized-light t)
 
-(require 'color-theme-solarized)
-(color-theme-solarized 'dark)
-
-;(require 'color-theme-sanityinc-solarized)
-;(color-theme-sanityinc-solarized 'dark)
-
-;(require 'color-theme-tomorrow)
-;(color-theme-tomorrow-real 'night)
-
-;(require 'color-theme-sanityinc-tomorrow)
-;(color-theme-sanityinc-tomorrow 'night)
+;; sanityinc tomorrow theme
+;; (load-theme 'sanityinc-tomorrow-bright t)
+;; (load-theme 'sanityinc-tomorrow-eighties t)
+;; (load-theme 'sanityinc-tomorrow-night t)
+;; (load-theme 'sanityinc-tomorrow-day t)
+;; (load-theme 'sanityinc-tomorrow-blue t)
 
 ;;; set default display font
-(if (display-graphic-p)
-(set-face-font 'default
-               (font-candidate "Droid Sans Mono-10.5"
-                               "WenQuanYi Micro Hei Mono-10.5"
-                               "Consolas-10.5"
-                               "Source Code Pro-10.5")))
+(when (display-graphic-p)
+  (set-face-font 'default
+                 (font-candidate "Droid Sans Mono-10.5"
+                                 "WenQuanYi Micro Hei Mono-10.5"
+                                 "Consolas-10.5"
+                                 "Source Code Pro-10.5")))
 
 ;;; set special font for Chinese
-(if (display-graphic-p)
-    (dolist (charset '(kana han symbol cjk-misc bopomofo))
-      (set-fontset-font (frame-parameter nil 'font)
-                        charset
-                        (font-candidate "Microsoft Yahei-12"
-                                        "WenQuanYi Micro Hei-10.5"))))
+(when (display-graphic-p)
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset
+                      (font-candidate "Microsoft Yahei-12"
+                                      "WenQuanYi Micro Hei-10.5"))))
 
 
 (provide 'conf-theme)
