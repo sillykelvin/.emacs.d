@@ -2,17 +2,15 @@
 ; ******* auto complete config *******
 ;        Author:  Kelvin Hu
 ;       Created:  06/16/2012
-; Last Modified:  08/14/2012
+; Last Modified:  03/27/2013
 ;---------------------------------------------------------------------------------
-
-(add-to-list 'load-path "~/.emacs.d/lib/auto-complete")
 
 (require 'auto-complete-config)
 
 (global-auto-complete-mode t)
 
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/lib/auto-complete/dict")
-(add-to-list 'ac-modes 'dos-mode)
+;; configuration below is not needed, auto-complete will add this itself
+;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20130324.1306/dict")
 
 (setq ac-auto-show-menu t
       ;; fix issue https://github.com/m2ym/auto-complete/issues/127
