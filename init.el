@@ -2,7 +2,7 @@
 ; ******* Emacs main config file *******
 ;        Author:  Kelvin Hu
 ;       Created:  04/26/2012
-; Last Modified:  03/25/2013
+; Last Modified:  03/27/2013
 ;-------------------------------------------------------------------------------
 
 ;; disable loading vc plugins, it will obviously slow down emacs booting
@@ -20,7 +20,6 @@
 
 
 (add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/lib")
 (add-to-list 'load-path "~/.emacs.d/conf")
 (add-to-list 'load-path "~/.emacs.d/util")
 
@@ -30,6 +29,8 @@
 (require 'conf-misc)
 
 (require 'conf-ido)
+
+(require 'conf-smex)
 
 (require 'conf-tabbar)
 
