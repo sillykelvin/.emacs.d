@@ -2,7 +2,7 @@
 ; ******* Emacs main config file *******
 ;        Author:  Kelvin Hu
 ;       Created:  04/26/2012
-; Last Modified:  03/27/2013
+; Last Modified:  03/28/2013
 ;-------------------------------------------------------------------------------
 
 ;; disable loading vc plugins, it will obviously slow down emacs booting
@@ -13,6 +13,8 @@
 (package-initialize)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives
+             '("org" . "http://orgmode.org/elpa/") t)
 
 (require 'server)
 (unless (server-running-p)
