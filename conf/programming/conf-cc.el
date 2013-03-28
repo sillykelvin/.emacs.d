@@ -12,6 +12,9 @@
 
 (require 'auto-complete-clang)
 
+;; tell emacs to open .h file in c++ mode, default is c mode
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
 (setq ac-clang-flags
       (if is-os-windows
           (list "-ID:/SDTs/MinGW/include/"
