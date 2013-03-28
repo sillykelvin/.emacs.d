@@ -2,7 +2,7 @@
 ; ******* main programming config *******
 ;        Author:  Kelvin Hu
 ;       Created:  06/16/2012
-; Last Modified:  03/27/2013
+; Last Modified:  03/28/2013
 ;-------------------------------------------------------------------------------
 
 (add-to-list 'load-path "~/.emacs.d/conf/programming")
@@ -11,6 +11,8 @@
 ;; (require 'conf-batch)
 
 (require 'conf-lisp)
+
+(require 'conf-cc)
 
 
 (provide 'conf-programming)
