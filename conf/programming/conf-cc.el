@@ -2,7 +2,7 @@
 ; ******* cc mode config *******
 ;        Author:  Kelvin Hu
 ;       Created:  03/28/2013
-; Last Modified:  03/28/2013
+; Last Modified:  03/29/2013
 ;-------------------------------------------------------------------------------
 
 ;; this statement must be put before the next require statement, otherwise the
@@ -35,6 +35,8 @@
   (setq c-indent-level 4)
   (setq indent-tabs-mode nil)
   ;; minor modes
+  (ggtags-mode t)
+  (which-function-mode t)
   ;; (auto-fill-mode 1)
   ;; (c-turn-on-eldoc-mode)
   ;; (gtags-mode 1)
