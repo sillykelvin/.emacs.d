@@ -2,7 +2,7 @@
 ; ******* theme config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/07/2012
-; Last Modified:  03/27/2013
+; Last Modified:  05/06/2013
 ;-------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -28,7 +28,8 @@
 ;;; set default display font
 (when (display-graphic-p)
   (set-face-font 'default
-                 (font-candidate "Droid Sans Mono-10.5"
+                 (font-candidate "PragmataPro-12"
+                                 "Droid Sans Mono-10.5"
                                  "WenQuanYi Micro Hei Mono-10.5"
                                  "Consolas-10.5"
                                  "Source Code Pro-10.5")))
