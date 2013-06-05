@@ -2,7 +2,7 @@
 ; ******* some utility definitions for editing *******
 ;        Author:  Kelvin Hu
 ;       Created:  06/28/2012
-; Last Modified:  11/15/2012
+; Last Modified:  06/05/2013
 ;---------------------------------------------------------------------------------
 
 ;;; convert tab to spaces
@@ -39,6 +39,12 @@
     (setq beg (line-beginning-position)
           end (line-end-position)))
   (comment-or-uncomment-region beg end arg))
+
+(defun switch-to-scratch ()
+  "Switch to *scratch* buffer."
+  (interactive)
+  (let ((buffer (get-buffer-create "*scratch*")))
+    (switch-to-buffer buffer)))
 
 
 (provide 'util-editing)

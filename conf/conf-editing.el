@@ -2,7 +2,7 @@
 ; ******* config for more comfortable editing *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/12/2012
-; Last Modified:  02/22/2013
+; Last Modified:  06/05/2013
 ;---------------------------------------------------------------------------------
 
 (require 'util-editing)
@@ -61,6 +61,9 @@
 (setq comment-style 'multi-line)
 ;;; define the smart comment/uncomment key binding
 (define-key (current-global-map) (kbd "C-x C-/") 'smart-toggle-comment)
+
+(global-set-key (kbd "C-x C-j") 'join-line)
+(global-set-key (kbd "C-c s") 'switch-to-scratch)
 
 
 (provide 'conf-editing)
