@@ -2,7 +2,7 @@
 ; ******* cc mode config *******
 ;        Author:  Kelvin Hu
 ;       Created:  03/28/2013
-; Last Modified:  03/29/2013
+; Last Modified:  06/05/2013
 ;-------------------------------------------------------------------------------
 
 ;; this statement must be put before the next require statement, otherwise the
@@ -30,13 +30,18 @@
   "This function is an extended version of `ac-cc-mode-setup'."
   ;; (make-local-variable 'ac-auto-start)
   ;; (setq ac-auto-start nil)
-  (setq ac-sources (append '(ac-source-yasnippet ac-source-clang) ac-sources))
+
+  ;;; DO NOT use ac-source-clang, it is really really really CPU sensitive
+  ;;;(setq ac-sources (append '(ac-source-yasnippet ac-source-clang) ac-sources))
+  (setq ac-sources (append '(ac-source-yasnippet) ac-sources))
+
   (setq c-basic-offset 4)
   (setq c-indent-level 4)
   (setq indent-tabs-mode nil)
   ;; minor modes
   (ggtags-mode t)
   (which-function-mode t)
+  (local-set-key (kbd "M-o") 'ff-find-other-file)
   ;; (auto-fill-mode 1)
   ;; (c-turn-on-eldoc-mode)
   ;; (gtags-mode 1)
