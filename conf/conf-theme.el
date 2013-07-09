@@ -40,7 +40,7 @@
     (set-fontset-font (frame-parameter nil 'font)
                       charset
                       (font-candidate "Microsoft Yahei-12"
-                                      "WenQuanYi Micro Hei-10.5"))))
+                                      "WenQuanYi Micro Hei-12"))))
 
 
 (provide 'conf-theme)
