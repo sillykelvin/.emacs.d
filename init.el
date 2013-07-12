@@ -8,13 +8,6 @@
 ;; disable loading vc plugins, it will obviously slow down emacs booting
 (setq vc-handled-backends nil)
 
-;; use package.el to manage packages rather than manual efforts
-(require 'package)
-(package-initialize)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives
-             '("org" . "http://orgmode.org/elpa/") t)
 
 (require 'server)
 (unless (server-running-p)
@@ -25,6 +18,9 @@
 (add-to-list 'load-path "~/.emacs.d/conf")
 (add-to-list 'load-path "~/.emacs.d/util")
 
+
+;; be sure the package dependency verification module is at the first step
+(require 'conf-package)
 
 (require 'conf-theme)
 
