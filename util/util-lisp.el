@@ -5,6 +5,8 @@
 ; Last Modified:  07/21/2013
 ;-------------------------------------------------------------------------------
 
+(require 'cmuscheme)
+
 (defun kh/get-scheme-proc-create ()
   "Create one scheme process if no one is created."
   (unless (and scheme-buffer
