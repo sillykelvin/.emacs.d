@@ -8,9 +8,11 @@
 (require 'util-common)
 (require 'util-lisp)
 
-(kh/add-hook '(lisp-mode-hook emacs-lisp-mode-hook)
-             '((lambda ()
-                (show-paren-mode t))))
+;;; foolish, show-paren-mode is a global minor mode, add it to lisp mode hook
+;;; will also affect all buffers, move it to conf-misc.el
+;; (kh/add-hook '(lisp-mode-hook emacs-lisp-mode-hook)
+;;              '((lambda ()
+;;                 (show-paren-mode t))))
 
 (if is-os-windows
     (setq scheme-program-name "racket")

@@ -2,7 +2,7 @@
 ; ******* misc config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/05/2012
-; Last Modified:  03/07/2013
+; Last Modified:  07/21/2013
 ;---------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -119,6 +119,8 @@
 
 ;;; auto refresh buffers when files changed on disk
 (global-auto-revert-mode t)
+
+(show-paren-mode t)
 
 
 (provide 'conf-misc)
