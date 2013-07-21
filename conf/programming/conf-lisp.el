@@ -14,6 +14,13 @@
 ;;              '((lambda ()
 ;;                 (show-paren-mode t))))
 
+(kh/add-hook '(lisp-mode-hook
+               emacs-lisp-mode-hook
+               lisp-interaction-mode-hook
+               scheme-mode-hook)
+             '((lambda ()
+                 (fci-mode t))))
+
 (if is-os-windows
     (setq scheme-program-name "racket")
   (setq scheme-program-name "guile"))
