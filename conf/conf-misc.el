@@ -122,5 +122,7 @@
 
 (show-paren-mode t)
 
+(setq fci-rule-column 80)
+
 
 (provide 'conf-misc)
