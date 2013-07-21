@@ -119,7 +119,9 @@
 
 (show-paren-mode t)
 
-(setq fci-rule-column 80)
+;;; fuck, fci-rule-column is a local variable, use setq-default instead of setq
+;(setq fci-rule-column 80)
+(setq-default fci-rule-column 80)
 
 
 (provide 'conf-misc)
