@@ -2,7 +2,7 @@
 ; ******* Emacs main config file *******
 ;        Author:  Kelvin Hu
 ;       Created:  04/26/2012
-; Last Modified:  03/28/2013
+; Last Modified:  08/19/2013
 ;-------------------------------------------------------------------------------
 
 ;; disable loading vc plugins, it will obviously slow down emacs booting
@@ -42,7 +42,9 @@
 
 (require 'conf-ace-jump)
 
-(require 'conf-autopair)
+;;; now use smartparens instead of autopair
+;; (require 'conf-autopair)
+(require 'conf-smartparens)
 
 (require 'conf-org)
 
