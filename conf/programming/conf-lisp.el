@@ -2,7 +2,7 @@
 ; ******* Lisp style programming config *******
 ;        Author:  Kelvin Hu
 ;       Created:  12/12/2012
-; Last Modified:  07/21/2013
+; Last Modified:  07/25/2013
 ;-------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -19,7 +19,11 @@
                lisp-interaction-mode-hook
                scheme-mode-hook)
              '((lambda ()
-                 (fci-mode t))))
+                 ;; fix bug with org-page, if fci-mode is enabled, the exported
+                 ;; code will contain extra garbage characters, so disable it
+                 ;; when in temp buffer, then org-page will work correctly
+                 (when (buffer-file-name)
+                   (fci-mode t)))))
 
 (if is-os-windows
     (setq scheme-program-name "racket")
