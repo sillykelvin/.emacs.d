@@ -2,7 +2,7 @@
 ; ******* package management config *******
 ;        Author:  Kelvin Hu
 ;       Created:  07/07/2013
-; Last Modified:  07/07/2013
+; Last Modified:  08/19/2013
 ;-------------------------------------------------------------------------------
 
 ;; use package.el to manage packages rather than manual efforts
@@ -14,6 +14,8 @@
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives
              '("org" . "http://orgmode.org/elpa/") t)
+(add-to-list 'package-archives
+             '("SC" . "http://joseito.republika.pl/sunrise-commander/") t)
 
 
 (defvar kh/depended-packages
@@ -26,6 +28,7 @@
     markdown-mode
     mustache
     org
+    smartparens
     smex
     tabbar
     undo-tree
