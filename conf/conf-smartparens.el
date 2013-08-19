@@ -11,6 +11,24 @@
 
 (show-smartparens-global-mode t)
 
+;;; customization for c-mode and c++-mode, after a { is inputted, automatically
+;;; create a newline and indent it
+(defun kh/create-newline-and-enter-sexp (&rest _ignored)
+  (newline)
+  (newline)
+  (indent-according-to-mode)  ;; indent close brace
+  (forward-line -1)           ;; go back
+  (indent-according-to-mode)) ;; indent the empty line which is ready for code
+
+(sp-with-modes '(c-mode c++-mode)
+  ;;; the commented lines can only be triggered by <RET> pressed
+  ;;; the working line will automatically finish the work
+  ;; (sp-local-pair "{" nil
+  ;;                :post-handlers '((kh/create-newline-and-enter-sexp "RET")))
+  (sp-local-pair "{" nil
+                 :post-handlers '(kh/create-newline-and-enter-sexp)))
+
+
 ;;; the following key bindings are copied from the example configuration of
 ;;; smartparens wiki:
 ;;;   https://github.com/Fuco1/smartparens/wiki/Example-configuration
