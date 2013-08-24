@@ -2,9 +2,10 @@
 ; ******* Lisp style programming config *******
 ;        Author:  Kelvin Hu
 ;       Created:  12/12/2012
-; Last Modified:  07/25/2013
+; Last Modified:  08/24/2013
 ;-------------------------------------------------------------------------------
 
+(require 'elisp-slime-nav)
 (require 'util-common)
 (require 'util-lisp)
 
@@ -13,6 +14,10 @@
 ;; (kh/add-hook '(lisp-mode-hook emacs-lisp-mode-hook)
 ;;              '((lambda ()
 ;;                 (show-paren-mode t))))
+
+(kh/add-hook '(emacs-lisp-mode-hook
+               ielm-mode-hook)
+             '(elisp-slime-nav-mode))
 
 (kh/add-hook '(lisp-mode-hook
                emacs-lisp-mode-hook
