@@ -22,7 +22,7 @@
   '(ace-jump-mode
     auto-complete
     color-theme
-    emacs-slime-nav
+    elisp-slime-nav
     fill-column-indicator
     ggtags
     highlight-symbol
