@@ -2,7 +2,7 @@
 ; ******* package management config *******
 ;        Author:  Kelvin Hu
 ;       Created:  07/07/2013
-; Last Modified:  08/19/2013
+; Last Modified:  08/24/2013
 ;-------------------------------------------------------------------------------
 
 ;; use package.el to manage packages rather than manual efforts
