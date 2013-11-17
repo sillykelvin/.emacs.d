@@ -2,7 +2,7 @@
 ; ******* Emacs main config file *******
 ;        Author:  Kelvin Hu
 ;       Created:  04/26/2012
-; Last Modified:  08/19/2013
+; Last Modified:  11/17/2013
 ;-------------------------------------------------------------------------------
 
 ;; disable loading vc plugins, it will obviously slow down emacs booting
@@ -47,6 +47,8 @@
 (require 'conf-smartparens)
 
 (require 'conf-org)
+
+(require 'conf-org-page)
 
 (require 'conf-ibuffer)
 
