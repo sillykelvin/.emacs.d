@@ -2,7 +2,7 @@
 ; ******* misc config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/05/2012
-; Last Modified:  07/21/2013
+; Last Modified:  11/27/2013
 ;-------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -117,7 +117,8 @@
 ;;; auto refresh buffers when files changed on disk
 (global-auto-revert-mode t)
 
-(show-paren-mode t)
+;;; disable show-paren-mode, use smartparens instead
+;(show-paren-mode t)
 
 ;;; fuck, fci-rule-column is a local variable, use setq-default instead of setq
 ;(setq fci-rule-column 80)
