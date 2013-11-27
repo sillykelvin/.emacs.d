@@ -2,7 +2,7 @@
 ; ******* theme config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/07/2012
-; Last Modified:  07/09/2013
+; Last Modified:  11/27/2013
 ;-------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -41,6 +41,20 @@
                       charset
                       (font-candidate "Microsoft Yahei-12"
                                       "WenQuanYi Micro Hei-12"))))
+
+;;; set frame transparency effect
+(setq alpha-list '((95 70) (100 100)))
+
+(defun loop-alpha ()
+  (interactive)
+  (let ((h (car alpha-list)))
+    ((lambda (a ab)
+       (set-frame-parameter (selected-frame) 'alpha (list a ab))
+       (add-to-list 'default-frame-alist (cons 'alpha (list a ab))))
+     (car h) (car (cdr h)))
+    (setq alpha-list (cdr (append alpha-list (list h))))))
+
+(loop-alpha)
 
 
 (provide 'conf-theme)
