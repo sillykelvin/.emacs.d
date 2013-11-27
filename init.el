@@ -2,7 +2,7 @@
 ; ******* Emacs main config file *******
 ;        Author:  Kelvin Hu
 ;       Created:  04/26/2012
-; Last Modified:  11/17/2013
+; Last Modified:  11/27/2013
 ;-------------------------------------------------------------------------------
 
 ;; disable loading vc plugins, it will obviously slow down emacs booting
@@ -30,7 +30,8 @@
 
 (require 'conf-smex)
 
-(require 'conf-tabbar)
+;;; do not require tabbar anymore, I have never used it these days
+;; (require 'conf-tabbar)
 
 (require 'conf-editing)
 
