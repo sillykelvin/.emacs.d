@@ -2,12 +2,15 @@
 ; ******* org-page config *******
 ;        Author:  Kelvin Hu
 ;       Created:  11/17/2013
-; Last Modified:  11/17/2013
+; Last Modified:  11/27/2013
 ;-------------------------------------------------------------------------------
 
 (require 'org-page)
 
-(setq op/repository-directory "~/devel/kelvinh.github.com/")
+(if is-os-windows
+    (setq op/repository-directory "D:/CodeLabs/GitHub/kelvinh.github.com/")
+  (setq op/repository-directory "~/devel/kelvinh.github.com/"))
+
 (setq op/site-domain "http://kelvinh.github.io/")
 (setq op/site-main-title "Kelvin的胡言乱语")
 (setq op/site-sub-title "==============> 重剑无锋，大巧不工。")
