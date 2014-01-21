@@ -21,7 +21,10 @@
 (defvar kh/depended-packages
   '(ace-jump-mode
     auto-complete
+    auto-complete-clang
     color-theme
+    color-theme-sanityinc-solarized
+    color-theme-sanityinc-tomorrow
     elisp-slime-nav
     fill-column-indicator
     ggtags
@@ -29,6 +32,7 @@
     markdown-mode
     mustache
     org
+    org-page
     smartparens
     smex
     tabbar
