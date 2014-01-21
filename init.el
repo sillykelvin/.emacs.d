@@ -14,7 +14,8 @@
   (server-start))
 
 
-(add-to-list 'load-path "~/.emacs.d")
+;;; remove the following path, it will cause warning info on Mac OS X
+;; (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/conf")
 (add-to-list 'load-path "~/.emacs.d/util")
 
