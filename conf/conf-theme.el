@@ -2,7 +2,7 @@
 ; ******* theme config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/07/2012
-; Last Modified:  11/27/2013
+; Last Modified:  01/21/2014
 ;-------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -28,11 +28,14 @@
 ;;; set default display font
 (when (display-graphic-p)
   (set-face-font 'default
-                 (font-candidate "PragmataPro-12"
-                                 "Droid Sans Mono-10.5"
-                                 "WenQuanYi Micro Hei Mono-10.5"
-                                 "Consolas-10.5"
-                                 "Source Code Pro-10.5")))
+                 (if is-os-mac
+                     (font-candidate "PragmataPro-14"
+                                     "Courier New-14")
+                   (font-candidate "PragmataPro-12"
+                                   "Droid Sans Mono-10.5"
+                                   "WenQuanYi Micro Hei Mono-10.5"
+                                   "Consolas-10.5"
+                                   "Source Code Pro-10.5"))))
 
 ;;; set special font for Chinese
 (when (display-graphic-p)
