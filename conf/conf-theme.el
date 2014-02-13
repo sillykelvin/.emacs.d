@@ -2,7 +2,7 @@
 ; ******* theme config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/07/2012
-; Last Modified:  01/21/2014
+; Last Modified:  02/13/2014
 ;-------------------------------------------------------------------------------
 
 (require 'util-common)
@@ -42,8 +42,10 @@
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
                       charset
-                      (font-candidate "Microsoft Yahei-12"
-                                      "WenQuanYi Micro Hei-12"))))
+                      (if is-os-mac
+                          (font-candidate "Heiti SC-14")
+                        (font-candidate "Microsoft Yahei-12"
+                                        "WenQuanYi Micro Hei-12")))))
 
 ;;; set frame transparency effect
 (setq alpha-list '((95 70) (100 100)))
