@@ -2,23 +2,26 @@
 ; ******* Emacs main config file *******
 ;        Author:  Kelvin Hu
 ;       Created:  04/26/2012
-; Last Modified:  01/20/2014
+; Last Modified:  02/25/2014
 ;-------------------------------------------------------------------------------
 
 ;; disable loading vc plugins, it will obviously slow down emacs booting
 (setq vc-handled-backends nil)
 
-
 (require 'server)
 (unless (server-running-p)
   (server-start))
-
 
 ;;; remove the following path, it will cause warning info on Mac OS X
 ;; (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/conf")
 (add-to-list 'load-path "~/.emacs.d/util")
 
+;; set the proxy server if it is an office machine, as all traffic without proxy
+;; will be blocked, so emacs package update will always fail
+(require 'util-common)
+(if is-os-windows
+    (setq url-proxy-services '(("http" . "10.64.1.186:8080"))))
 
 ;; be sure the package dependency verification module is at the first step
 (require 'conf-package)
