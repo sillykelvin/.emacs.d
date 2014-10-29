@@ -2,7 +2,7 @@
 ; ******* theme config *******
 ;        Author:  Kelvin Hu
 ;       Created:  05/07/2012
-; Last Modified:  05/05/2014
+; Last Modified:  10/29/2014
 ;-------------------------------------------------------------------------------
 
 (require 'cl)
@@ -10,14 +10,14 @@
 
 ;; molokai theme ported from vim
 ;; (load-theme 'molokai t)
-(load-theme 'afternoon t)
+;; (load-theme 'afternoon t)
 
 ;; popular solarized theme
 ;; (load-theme 'solarized-dark t)
 ;; (load-theme 'solarized-light t)
 
 ;; sanityinc solarized theme
-;; (load-theme 'sanityinc-solarized-dark t)
+(load-theme 'sanityinc-solarized-dark t)
 ;; (load-theme 'sanityinc-solarized-light t)
 
 ;; sanityinc tomorrow theme
@@ -61,7 +61,8 @@
      (car h) (car (cdr h)))
     (setq alpha-list (cdr (append alpha-list (list h))))))
 
-(loop-alpha)
+;;; do not make frame transparency, it looks cool, but is useless
+;; (loop-alpha)
 
 
 (provide 'conf-theme)
