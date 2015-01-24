@@ -1,0 +1,85 @@
+#+TITLE:       The Emacs Configuration of Kelvin Hu
+#+AUTHOR:      Kelvin Hu
+#+EMAIL:       ini.kelvin@gmail.com
+#+DATE:        2015-01-24 Sat
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+
+
+Now it's time to configure Emacs through org-mode, I should catch up the
+fashion, shouldn't I? :-p
+
+* General Configuration
+
+  1. disable loading vc plugins, it will obviously slow down emacs booting:
+
+     #+BEGIN_SRC emacs-lisp
+     (setq vc-handled-backends nil)
+     #+END_SRC
+
+  2. start the server:
+
+     #+BEGIN_SRC emacs-lisp
+     (require 'server)
+     ;; fix directory unsafe error
+     (when (and (>= emacs-major-version 23)
+                (equal window-system 'w32))
+       (defun server-ensure-safe-dir (dir) "Noop" t))
+     (unless (server-running-p)
+       (server-start))
+     #+END_SRC
+
+  3. extend the loading path:
+
+     #+BEGIN_SRC emacs-lisp
+     (add-to-list 'load-path "~/.emacs.d/conf")
+     (add-to-list 'load-path "~/.emacs.d/util")
+     #+END_SRC
+
+* Sub Packages
+
+  1. setup the proxy server if it is an office machine, as all traffic without
+     proxy will be blocked, so emacs package update will always fail
+
+     #+BEGIN_SRC emacs-lisp
+     (require 'util-common)
+     (if is-os-windows
+         (setq url-proxy-services '(("http" . "web-proxy.oa.com:8080"))))
+     #+END_SRC
+
+  2. make sure the package dependency verification module is loaded at the
+     first step
+
+      #+BEGIN_SRC emacs-lisp
+      (require 'conf-package)
+      #+END_SRC
+
+  3. other modules
+
+     #+BEGIN_SRC emacs-lisp
+     (require 'conf-theme)
+     (require 'conf-misc)
+     (require 'conf-ido)
+     (require 'conf-smex)
+     (require 'conf-editing)
+     (require 'conf-programming)
+     (require 'conf-auto-complete)
+     (require 'conf-markdown)
+     (require 'conf-ace-jump)
+     (require 'conf-smartparens)
+     (require 'conf-org)
+     (require 'conf-org-page)
+     (require 'conf-ibuffer)
+     (require 'conf-yasnippet)
+     (require 'conf-flyspell)
+     (require 'conf-encoding)
+     (require 'conf-undo-tree)
+     (require 'conf-highlight-symbol)
+     #+END_SRC
+
+  4. read the desktop configuration at the last step
+
+     #+BEGIN_SRC emacs-lisp
+     (require 'conf-desktop)
+     #+END_SRC
+
+* TODO also use org-mode to configure other sub modules
