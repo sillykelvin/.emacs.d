@@ -26,6 +26,7 @@
     color-theme-sanityinc-solarized
     color-theme-sanityinc-tomorrow
     elisp-slime-nav
+    evil
     fill-column-indicator
     ggtags
     highlight-symbol
