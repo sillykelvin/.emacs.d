@@ -2,7 +2,7 @@
 ; ******* package management config *******
 ;        Author:  Kelvin Hu
 ;       Created:  07/07/2013
-; Last Modified:  08/24/2013
+; Last Modified:  01/27/2015
 ;-------------------------------------------------------------------------------
 
 ;; use package.el to manage packages rather than manual efforts
@@ -31,6 +31,7 @@
     ggtags
     helm
     highlight-symbol
+    magit
     markdown-mode
     mustache
     org
