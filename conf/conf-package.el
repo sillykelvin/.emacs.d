@@ -29,6 +29,7 @@
     evil
     fill-column-indicator
     ggtags
+    helm
     highlight-symbol
     markdown-mode
     mustache
