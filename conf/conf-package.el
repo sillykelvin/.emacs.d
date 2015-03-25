@@ -2,7 +2,7 @@
 ; ******* package management config *******
 ;        Author:  Kelvin Hu
 ;       Created:  07/07/2013
-; Last Modified:  01/27/2015
+; Last Modified:  03/25/2015
 ;-------------------------------------------------------------------------------
 
 ;; use package.el to manage packages rather than manual efforts
@@ -25,12 +25,15 @@
     color-theme
     color-theme-sanityinc-solarized
     color-theme-sanityinc-tomorrow
+    company
+    company-irony
     elisp-slime-nav
     evil
     fill-column-indicator
     ggtags
     helm
     highlight-symbol
+    irony
     magit
     markdown-mode
     mustache

@@ -62,7 +62,8 @@ fashion, shouldn't I? :-p
      (require 'conf-smex)
      (require 'conf-editing)
      (require 'conf-programming)
-     (require 'conf-auto-complete)
+     ;;; now, use company instead of auto-complete
+     ;; (require 'conf-auto-complete)
      (require 'conf-markdown)
      (require 'conf-ace-jump)
      (require 'conf-smartparens)
@@ -132,6 +133,35 @@ fashion, shouldn't I? :-p
     (setq helm-buffers-fuzzy-matching t)
 
     (helm-mode 1)
+  #+END_SRC
+
+* company-mode
+
+  It should be the next generation completion engine. :-)
+
+  #+BEGIN_SRC emacs-lisp
+    (require 'company)
+
+    (add-hook 'after-init-hook 'global-company-mode)
+  #+END_SRC
+
+* irony-mode
+
+  A great mode for C/C++ completion using libclang.
+
+  #+BEGIN_SRC emacs-lisp
+    (require 'irony)
+
+    (add-hook 'c++-mode-hook 'irony-mode)
+    (add-hook 'c-mode-hook 'irony-mode)
+
+    (eval-after-load 'company
+      '(add-to-list 'company-backends 'company-irony))
+
+    ;; (optional) adds CC special commands to `company-begin-commands' in order to
+    ;; trigger completion at interesting places, such as after scope operator
+    ;;     std::|
+    (add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
   #+END_SRC
 
 * neotree
