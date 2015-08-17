@@ -14,5 +14,7 @@
 
 (require 'conf-cc)
 
+(require 'conf-rust)
+
 
 (provide 'conf-programming)

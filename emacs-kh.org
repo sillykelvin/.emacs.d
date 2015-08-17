@@ -162,6 +162,9 @@ fashion, shouldn't I? :-p
     ;; trigger completion at interesting places, such as after scope operator
     ;;     std::|
     (add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
+
+    (if is-os-windows
+        (setq w32-pipe-read-delay 0))
   #+END_SRC
 
 * neotree
